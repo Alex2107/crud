@@ -47,10 +47,6 @@
     </style>
 </head>
 <body>
-<a href="../../index.jsp">Back to main menu</a>
-
-<br/>
-<br/>
 
 <h1>Book List</h1>
 
@@ -100,7 +96,7 @@
         <tr>
             <td>
                 <form:label path="title">
-                    <spring:message text="title"/>
+                    <spring:message text="Title"/>
                 </form:label>
             </td>
             <td>
@@ -110,17 +106,17 @@
         <tr>
             <td>
                 <form:label path="author">
-                    <spring:message text="author"/>
+                    <spring:message text="Author"/>
                 </form:label>
             </td>
             <td>
-                <form:input path="author"/>
+                <form:input path="author" readonly="${!empty book.title}"/>
             </td>
         </tr>
         <tr>
             <td>
                 <form:label path="description">
-                    <spring:message text="description"/>
+                    <spring:message text="Description"/>
                 </form:label>
             </td>
             <td>
@@ -129,12 +125,22 @@
         </tr>
         <tr>
             <td>
-                <form:label path="description">
-                    <spring:message text="description"/>
+                <form:label path="isbn">
+                    <spring:message text="ISBN"/>
                 </form:label>
             </td>
             <td>
-                <form:input path="description"/>
+                <form:input path="isbn"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <form:label path="printYear">
+                    <spring:message text="Year"/>
+                </form:label>
+            </td>
+            <td>
+                <form:input path="printYear"/>
             </td>
         </tr>
         <tr>
